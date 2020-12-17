@@ -1,0 +1,54 @@
+body {
+  background-color: blanchedalmond;
+}
+.img {
+  margin-right: 10px;
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+.box {
+  display: flex;
+  align-items: center;
+}
+.container {
+  background-color: white;
+  padding: 20px;
+  float: left;
+  margin: 50px 0px 0px 50px;
+}
+.select {
+  color: white;
+}
+.imgPortfolio {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+.submit {
+  margin-top: 10px;
+}
+.subContainer {
+  width: 80%;
+  margin-left: 10px;
+}
+@media screen and (max-width: 1380px) {
+  .container {
+    width: 800px;
+    background-color: lightblue;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 600px;
+    background-color: lightcoral;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 350px;
+    background-color: lightgreen;
+  }
+}
