@@ -1,10 +1,13 @@
+h1 {
+  color: #4aaaa5;
+}
 body {
-  background-color: blanchedalmond;
+  background-color: #ebebeb;
 }
 .img {
   margin-right: 10px;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   float: left;
 }
 .box {
@@ -15,14 +18,16 @@ body {
   background-color: white;
   padding: 20px;
   float: left;
-  margin: 50px 0px 0px 50px;
+  margin: 50px 0px 30px 30px;
+  position: relative;
+  width: 60%;
 }
 .select {
   color: white;
 }
 .imgPortfolio {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   margin: 10px;
 }
 .submit {
@@ -32,22 +37,41 @@ body {
   width: 80%;
   margin-left: 10px;
 }
+footer {
+  height: 70px;
+  width: 100%;
+  background-color: #666667;
+  bottom: 0;
+  border-top-width: 10px;
+  border-top-color: #4aaaa5;
+  border-top-style: solid;
+  margin: 0px;
+}
 
 @media screen and (max-width: 992px) {
-  .container {
-    width: 600px;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .container {
+  .imgPortfolio {
     width: 350px;
+    height: 350px;
+    margin: 0px;
+    margin-top: 20px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .container {
     width: 90%;
-    margin: 20px 10px 5px 10px;
+    margin: 100px 0px 30px 20px;
+  }
+  .imgPortfolio {
+    width: 350px;
+    height: 350px;
+    margin: 0px;
+    margin-top: 20px;
+  }
+  .container .portfolio {
+    text-align: center;
   }
 }
