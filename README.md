@@ -16,6 +16,8 @@ Responsive web application built using bootstrap that allow the application to b
 
 ### Bootstrap
 
-- Responsive Nav
+- Responsive Navigation
 - Responsive css
 - Nav contain link to other html file/pages
+- Label and Input
+- Button
