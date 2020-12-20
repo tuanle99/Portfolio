@@ -1,19 +1,34 @@
+/*
+h1 style
+*/
 h1 {
   color: #4aaaa5;
 }
+/*
+body style
+*/
 body {
   background-color: #ebebeb;
 }
+/*
+About image
+*/
 .img {
   margin-right: 10px;
   width: 200px;
   height: 200px;
   float: left;
 }
+/*
+About Me container
+*/
 .box {
   display: flex;
   align-items: center;
 }
+/*
+body container
+*/
 .container {
   background-color: white;
   padding: 20px;
@@ -22,21 +37,36 @@ body {
   position: relative;
   width: 60%;
 }
+/*
+nav link
+*/
 .select {
   color: white;
 }
+/*
+portfolio images
+*/
 .imgPortfolio {
   width: 250px;
   height: 250px;
   margin: 10px;
 }
+/*
+contact button
+*/
 .submit {
   margin-top: 10px;
 }
+/*
+contact sub container
+*/
 .subContainer {
   width: 80%;
   margin-left: 10px;
 }
+/*
+all pages footer
+*/
 footer {
   height: 70px;
   width: 100%;
@@ -45,12 +75,16 @@ footer {
   border-top-width: 10px;
   border-top-color: #4aaaa5;
   border-top-style: solid;
-  margin: 0px;
+  margin: 0px !important;
 }
-
+/*
+screen size with 992px max width
+*/
 @media screen and (max-width: 992px) {
 }
-
+/*
+screen size with 768px max width
+*/
 @media screen and (max-width: 768px) {
   .imgPortfolio {
     width: 350px;
@@ -59,7 +93,9 @@ footer {
     margin-top: 20px;
   }
 }
-
+/*
+screen size with 400px max width
+*/
 @media screen and (max-width: 400px) {
   .container {
     width: 90%;
