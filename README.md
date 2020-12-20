@@ -13,3 +13,9 @@ Responsive web application built using bootstrap that allow the application to b
 ### 400px
 
 ![400px screen-size](Assets\Images\400.PNG)
+
+### Bootstrap
+
+- Responsive Nav
+- Responsive css
+- Nav contain link to other html file/pages
