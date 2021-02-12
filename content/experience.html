@@ -7,14 +7,14 @@
     aria-expanded="false"
     aria-controls="program_language_list"
   >
-    Programming languages
+    Skills
   </a>
   <div
     class="collapse"
     id="program_language_list"
     style="margin: 10px 0px 10px 0px"
   >
-    <div class="card card-body">
+    <div class="card card-body primary-background-color">
       <div class="row">
         <div class="col-6">
           <ul id="skill_list"></ul>
@@ -40,27 +40,86 @@
     id="experience_list_render"
     style="margin: 10px 0px 10px 0px"
   >
-    <div class="card card-body" id="experience_data"></div>
+    <div
+      class="card card-body primary-background-color"
+      id="experience_data"
+    ></div>
+  </div>
+
+  <a
+    class="btn btn-info block"
+    data-toggle="collapse"
+    href="#project_render"
+    role="button"
+    aria-expanded="false"
+    aria-controls="project_render"
+  >
+    Project
+  </a>
+  <div class="collapse" id="project_render" style="margin: 10px 0px 10px 0px">
+    <div
+      class="card card-body primary-background-color"
+      id="project_data"
+    ></div>
   </div>
 </div>
 
 <script>
   $(document).ready(function () {
-    for (var i = 0; i < skill_array.length; i++) {
-      var li = $("<li>").text(skill_array[i]);
-      if (i % 2 == 0) {
-        $("#skill_list").append(li);
-      } else {
-        $("#skill_list_2").append(li);
+    $.getJSON("../Assets/data/skill_data.json", function (data) {
+      var skill_array = data.skill_array;
+      skill_array.sort(function (a, b) {
+        let x = a.toLowerCase(),
+          y = b.toLowerCase();
+        if (x < y) {
+          return -1;
+        }
+        if (y < x) {
+          return 1;
+        }
+        return 0;
+      });
+      for (var i = 0; i < skill_array.length; i++) {
+        var li = $("<li>").text(skill_array[i]);
+        if (i < skill_array.length / 2) {
+          $("#skill_list").append(li);
+        } else {
+          $("#skill_list_2").append(li);
+        }
       }
-    }
+    });
+
+    $.getJSON("../Assets/data/experience_list_data.json", function (data) {
+      var GeorgiaGames = data.experience_list.GeorgiaGames;
+      generate_experience_list(
+        GeorgiaGames.title,
+        GeorgiaGames.description,
+        GeorgiaGames.date,
+        GeorgiaGames.skill
+      );
+      var Atgworks = data.experience_list.Atgworks;
+      generate_experience_list(
+        Atgworks.title,
+        Atgworks.description,
+        Atgworks.date,
+        Atgworks.skill
+      );
+      var Gameplay = data.experience_list.Gameplay;
+      generate_experience_list(
+        Gameplay.title,
+        Gameplay.description,
+        Gameplay.date,
+        Gameplay.skill
+      );
+    });
 
     function generate_experience_list(title, descirption, date, skill) {
       var row = $("<div>").attr("class", "row");
       var col1 = $("<div>").attr("class", "col-6");
       var col2 = $("<div>").attr("class", "col-6");
 
-      var new_title = $("<h4>").text(title);
+      var new_title = $("<h4>");
+      var strong = $("<strong>").text(title);
       col1.append(new_title);
       var new_date = $("<p>").text(date);
       new_date.attr("class", "experience_date");
@@ -84,29 +143,13 @@
         new_skill.append(skill_text);
       }
 
+      new_title.append(strong);
+
       skill_div.append(skill_title, new_skill);
 
       row.append(col1, col2);
 
       $("#experience_data").append(row, new_description, skill_div);
     }
-
-    generate_experience_list(
-      experience_list.Atgworks.title,
-      experience_list.Atgworks.description,
-      experience_list.Atgworks.date,
-      experience_list.Atgworks.skill
-    );
-
-    generate_experience_list(
-      experience_list.Gameplay.title,
-      experience_list.Gameplay.description,
-      experience_list.Gameplay.date,
-      experience_list.Gameplay.skill
-    );
   });
 </script>
-
-<script src="../Assets/data/experience_list_data.js"></script>
-<script src="../Assets/data/bootcamp_data.js"></script>
-<script src="../Assets/data/skill_data.js"></script>

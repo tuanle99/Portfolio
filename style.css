@@ -1,7 +1,15 @@
+.primary-color {
+  color: #66fcf1;
+}
+.primary-background-color {
+  background-color: #dfdbdc;
+}
+.secondary-background-color {
+  background-color: #66fcf1;
+}
 .main-container {
   margin-top: 5%;
   margin-bottom: 5%;
-  background-color: #dfdbdc;
   border-radius: 10px;
 }
 .main-text {
@@ -12,7 +20,6 @@
   width: 50%;
 }
 .footer {
-  background-color: #dfdbdc;
   text-align: center;
   border-radius: 10px;
 }
@@ -31,7 +38,7 @@
 
 .select {
   font-weight: bold;
-  color: white !important;
+  color: #66fcf1 !important;
 }
 .hover {
   cursor: pointer;
@@ -48,8 +55,19 @@
   margin: 10px 0px 10px 0px;
 }
 
-@media only screen and (min-width: 800px) {
+.center {
+  align-self: center;
+}
+
+@media only screen and (min-width: 750px) {
   .img {
     height: 500px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .img {
+    height: 200px;
+    margin-top: 50%;
+    margin-bottom: 50%;
   }
 }

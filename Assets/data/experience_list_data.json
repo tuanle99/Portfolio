@@ -1,0 +1,25 @@
+{
+  "experience_list": {
+    "GeorgiaGames" : {
+      "title": "Georgia Games",
+      "description": "Developerd front-end web application",
+      "date": "05/2020 - 07/2020",
+      "skill": ["CSS", "HTML", "Javascript", "jQuery"]
+    },
+    "Atgworks": {
+      "title": "ATGWorks",
+      "description": "Developed front-end web application through React.js",
+      "date": "07/2020 - 10/2020",
+      "skill": ["Javascript", "Material UI", "React.js", "TypeScript"]
+    },
+    "Gameplay": {
+      "title": "GamePlay Inc.",
+      "description": [
+        "Work with multiple environments in ASP.NET CORE",
+        "Web scraping using Selenium and Python"
+      ],
+      "date": "01/2021 - Current",
+      "skill": ["Asp.net Core", "Python", "Selenium"]
+    }
+  }
+}
