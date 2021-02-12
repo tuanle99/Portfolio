@@ -1,0 +1,8 @@
+{
+    "Random-Recipe-Generator": {
+        "title": "Random-Recipe-Generator",
+        "git-link": "https://github.com/dboivert13/Random-Recipe-Generator",
+        "site-link": "https://dboivert13.github.io/Random-Recipe-Generator/",
+        "description": "Giving a list of ingredients that the user can filter through to find the perfect recipe, after selecting which ingredients the user want to include, this will generate an api call that will return a list of the most relevant recipes, the user can also save the recipe generated which they can later return to. The user also have the option to search for the 5 nearest grocery store to their location."
+    }
+}
