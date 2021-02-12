@@ -90,12 +90,12 @@
     });
 
     $.getJSON("assets/data/experience_list_data.json", function (data) {
-      var GeorgiaGames = data.experience_list.GeorgiaGames;
+      var Gameplay = data.experience_list.Gameplay;
       generate_experience_list(
-        GeorgiaGames.title,
-        GeorgiaGames.description,
-        GeorgiaGames.date,
-        GeorgiaGames.skill
+        Gameplay.title,
+        Gameplay.description,
+        Gameplay.date,
+        Gameplay.skill
       );
       var Atgworks = data.experience_list.Atgworks;
       generate_experience_list(
@@ -104,12 +104,12 @@
         Atgworks.date,
         Atgworks.skill
       );
-      var Gameplay = data.experience_list.Gameplay;
+      var GeorgiaGames = data.experience_list.GeorgiaGames;
       generate_experience_list(
-        Gameplay.title,
-        Gameplay.description,
-        Gameplay.date,
-        Gameplay.skill
+        GeorgiaGames.title,
+        GeorgiaGames.description,
+        GeorgiaGames.date,
+        GeorgiaGames.skill
       );
     });
 
