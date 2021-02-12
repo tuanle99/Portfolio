@@ -1,13 +1,51 @@
 .main-container {
   margin-top: 5%;
   margin-bottom: 5%;
+  background-color: #dfdbdc;
+  border-radius: 10px;
+}
+.main-text {
+  text-align: center;
+  padding-top: 20px;
+}
+.gatech-icon {
+  width: 50%;
 }
 .footer {
-  background-color: aquamarine;
+  background-color: #dfdbdc;
   text-align: center;
+  border-radius: 10px;
 }
 .icon-style {
   padding: 5px;
+}
+.img-thumbnail {
+  border: 0;
+  padding: 0;
+  float: right;
+}
+
+.remove-padding {
+  padding-right: 0;
+}
+
+.select {
+  font-weight: bold;
+  color: white !important;
+}
+.hover {
+  cursor: pointer;
+}
+.padding-all-around {
+  padding: 10px;
+}
+.experience_date {
+  float: right;
+}
+
+.block {
+  display: block;
+  margin: 10px 0px 10px 0px;
 }
 
 @media only screen and (min-width: 800px) {

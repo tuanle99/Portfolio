@@ -1,0 +1,112 @@
+<div class="container main-container padding-all-around">
+  <a
+    class="btn btn-info block"
+    data-toggle="collapse"
+    href="#program_language_list"
+    role="button"
+    aria-expanded="false"
+    aria-controls="program_language_list"
+  >
+    Programming languages
+  </a>
+  <div
+    class="collapse"
+    id="program_language_list"
+    style="margin: 10px 0px 10px 0px"
+  >
+    <div class="card card-body">
+      <div class="row">
+        <div class="col-6">
+          <ul id="skill_list"></ul>
+        </div>
+        <div class="col-6">
+          <ul id="skill_list_2"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a
+    class="btn btn-info block"
+    data-toggle="collapse"
+    href="#experience_list_render"
+    role="button"
+    aria-expanded="false"
+    aria-controls="experience_list_render"
+  >
+    Experiences
+  </a>
+  <div
+    class="collapse"
+    id="experience_list_render"
+    style="margin: 10px 0px 10px 0px"
+  >
+    <div class="card card-body" id="experience_data"></div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    for (var i = 0; i < skill_array.length; i++) {
+      var li = $("<li>").text(skill_array[i]);
+      if (i % 2 == 0) {
+        $("#skill_list").append(li);
+      } else {
+        $("#skill_list_2").append(li);
+      }
+    }
+
+    function generate_experience_list(title, descirption, date, skill) {
+      var row = $("<div>").attr("class", "row");
+      var col1 = $("<div>").attr("class", "col-6");
+      var col2 = $("<div>").attr("class", "col-6");
+
+      var new_title = $("<h4>").text(title);
+      col1.append(new_title);
+      var new_date = $("<p>").text(date);
+      new_date.attr("class", "experience_date");
+      col2.append(new_date);
+
+      if (Array.isArray(descirption)) {
+        var new_description = $("<div>");
+        for (var i = 0; i < descirption.length; i++) {
+          var descirption_text = $("<p>").text(descirption[i]);
+          new_description.append(descirption_text);
+        }
+      } else {
+        var new_description = $("<p>").text(descirption);
+      }
+
+      var skill_div = $("<div>");
+      var skill_title = $("<h5>").text("Software use on project:");
+      var new_skill = $("<ul>");
+      for (var i = 0; i < skill.length; i++) {
+        var skill_text = $("<li>").text(skill[i]);
+        new_skill.append(skill_text);
+      }
+
+      skill_div.append(skill_title, new_skill);
+
+      row.append(col1, col2);
+
+      $("#experience_data").append(row, new_description, skill_div);
+    }
+
+    generate_experience_list(
+      experience_list.Atgworks.title,
+      experience_list.Atgworks.description,
+      experience_list.Atgworks.date,
+      experience_list.Atgworks.skill
+    );
+
+    generate_experience_list(
+      experience_list.Gameplay.title,
+      experience_list.Gameplay.description,
+      experience_list.Gameplay.date,
+      experience_list.Gameplay.skill
+    );
+  });
+</script>
+
+<script src="../Assets/data/experience_list_data.js"></script>
+<script src="../Assets/data/bootcamp_data.js"></script>
+<script src="../Assets/data/skill_data.js"></script>
