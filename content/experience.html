@@ -66,7 +66,7 @@
 
 <script>
   $(document).ready(function () {
-    $.getJSON("../assets/data/skill_data.json", function (data) {
+    $.getJSON("assets/data/skill_data.json", function (data) {
       var skill_array = data.skill_array;
       skill_array.sort(function (a, b) {
         let x = a.toLowerCase(),
@@ -89,7 +89,7 @@
       }
     });
 
-    $.getJSON("../assets/data/experience_list_data.json", function (data) {
+    $.getJSON("assets/data/experience_list_data.json", function (data) {
       var GeorgiaGames = data.experience_list.GeorgiaGames;
       generate_experience_list(
         GeorgiaGames.title,
