@@ -23,9 +23,9 @@ $(document).ready(function () {
   });
 
   $.getJSON("assets/data/experience_list_data.json", function (data) {
-    generate_experience_list(data.experience_list.Gameplay);
-    generate_experience_list(data.experience_list.Atgworks);
-    generate_experience_list(data.experience_list.GeorgiaGames);
+    for (var i = 0; i < data.experience_list.length; i++) {
+      generate_experience_list(data.experience_list[i]);
+    }
   });
 
   function generate_experience_list({ title, description, date, skill }) {
@@ -68,8 +68,9 @@ $(document).ready(function () {
   }
 
   $.getJSON("assets/data/project_data.json", function (data) {
-    console.log(data.Random_Recipe_Generator);
-    render_project(data.Random_Recipe_Generator);
+    for (var i = 0; i < data.project.length; i++) {
+      render_project(data.project[i]);
+    }
   });
 
   function render_project({ title, git_link, site_link, description }) {
