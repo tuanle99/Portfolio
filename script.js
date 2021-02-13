@@ -1,5 +1,5 @@
 $(function () {
-  $("#main_content").load("./content/home.html");
+  $("#main_content").load("./content/experience.html");
 });
 
 $(document).ready(function () {
