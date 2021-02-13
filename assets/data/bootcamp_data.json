@@ -1,6 +1,6 @@
 {
-  "bootcamp": {
-    "Browser": {
+  "bootcamp": [
+    {
       "title": "Browser Based Technologies",
       "skill": [
         "HTML",
@@ -14,19 +14,19 @@
         "React.js"
       ]
     },
-    "Deployment": {
+    {
       "title": "Deployment/Command-Line Fundamentals",
       "skill": ["Heroku", "Git", "Github Pages"]
     },
-    "Api": {
+    {
       "title": "API Interaction",
       "skill": ["API", "JSON", "AJAX"]
     },
-    "Databases": {
+    {
       "title": "Databases",
       "skill": ["MySQL", "MongoDB"]
     },
-    "Server": {
+    {
       "title": "Server Side Development",
       "skill": [
         "Node.js",
@@ -36,7 +36,7 @@
         "MERN Stack (MongoDB, Express.js, React.js,Node.js)"
       ]
     },
-    "Quality": {
+    {
       "title": "Quality Assurance",
       "skill": [
         "Unit Testing",
@@ -45,6 +45,5 @@
         "Continuous Integration"
       ]
     }
-  }
-  
+  ]
 }

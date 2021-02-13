@@ -93,4 +93,10 @@ $(document).ready(function () {
       render_site_link
     );
   }
+
+  $.getJSON("assets/data/bootcamp_data.json", function (data) {
+    for (var i = 0; i < data.bootcamp.length; i++) {
+      console.log(data.bootcamp[i]);
+    }
+  });
 });
